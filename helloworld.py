@@ -55,7 +55,7 @@ while 1:
     
     # Check how many frames are in the movie 
     frameCount = int(ffmpeg.probe(inputVid)['streams'][0]['nb_frames'])
-
+    print(str(frameCount) + " frames")
     # Pick a random frame 
     frame = random.randint(0,frameCount)
 
@@ -64,7 +64,7 @@ while 1:
     
     # Use ffmpeg to extract a frame from the movie, crop it, letterbox it and save it as grab.jpg 
     generate_frame(inputVid, 'grab.jpg', msTimecode, width, height)
-    
+    print(",".join(os.listdir()))
     # Open grab.jpg in PIL  
     pil_im = Image.open("grab.jpg")
     
