@@ -64,7 +64,7 @@ while 1:
     
     # Use ffmpeg to extract a frame from the movie, crop it, letterbox it and save it as grab.jpg 
     generate_frame(inputVid, 'grab.jpg', msTimecode, width, height)
-    print(",".join(os.listdir()))
+    print(",".join(os.listdir(".")))
     # Open grab.jpg in PIL  
     pil_im = Image.open("grab.jpg")
     
